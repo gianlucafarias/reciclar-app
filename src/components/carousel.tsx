@@ -1,15 +1,15 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import Swipe from "react-easy-swipe";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-type Image = {
-  src: string;
+interface ImageData {
+  src: StaticImageData;
   alt: string;
-};
+}
 
 type Props = {
-  images: Image[];
+  images: ImageData[];
 };
 
 const Carousel: React.FC<Props> = ({ images }) => {
