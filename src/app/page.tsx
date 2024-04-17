@@ -17,14 +17,14 @@ export interface ApiResponse {
     message: string;
     userData: UserData;
 }
-
+{/* 
 const images = [
-    { src: banner, alt: 'Imagen 1' },
+    { src: banner.src, alt: 'Imagen 1' },
 
 
     // Agrega más imágenes según sea necesario
   ];
-
+*/}
 export interface UserData {
     city: string;
     email: string;
@@ -173,7 +173,7 @@ const Page = () => {
         </button>
     </div>
 </div>
-<Carousel images={images}/>
+{/* <Carousel images={images}/> */}
                             <div className="flex flex-col gap-3 ">
                                 <div className="flex justify-between items-center">
                                     <h1 className=" font-semibold  opacity-90 text-green-900 text-2xl tracking-wide">¿Qué vas a reciclar hoy?</h1>
