@@ -19,7 +19,7 @@ export interface ApiResponse {
 }
 
 const images = [
-    { src: banner, alt: 'Imagen 1' },
+    { src: 'https://designshifu.com/wp-content/uploads/2022/11/Ad-banner-design-ideas-examples-that-get-the-maximum-clicks.jpg', alt: 'Imagen 1' },
 
 
     // Agrega más imágenes según sea necesario
