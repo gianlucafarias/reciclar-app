@@ -16,18 +16,18 @@ export async function POST(request: NextRequest) {
         // check if user exists in db
         const user = await User.findOne({ email });
         if (!user) {
-            return NextResponse.json({ error: "User does not exist", success: false }, { status: HTTP_STATUS.NOT_FOUND });
+            return NextResponse.json({ error: "El usuario no existe", success: false }, { status: HTTP_STATUS.NOT_FOUND });
         }
 
         if (!user.isVerified) {
-            return NextResponse.json({ error: "Please verify email before login", success: false }, { status: HTTP_STATUS.UNAUTHORIZED });
+            return NextResponse.json({ error: "Por favor verifique su cuenta antes de ingresar", success: false }, { status: HTTP_STATUS.UNAUTHORIZED });
         }
 
         // check if password is correct
 
         const validPassword = await bcryptjs.compare(password, user.password);
         if (!validPassword) {
-            return NextResponse.json({ error: "Invalid password", success: false }, { status: HTTP_STATUS.UNAUTHORIZED });
+            return NextResponse.json({ error: "Contraseña incorrecta", success: false }, { status: HTTP_STATUS.UNAUTHORIZED });
         }
         // create token data
         const tokenData = {

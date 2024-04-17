@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: "Please provide a valid state", success: false }, { status: HTTP_STATUS.BAD_REQUEST });
         }
         if (user) {
-            return NextResponse.json({ error: "User already exists", success: false }, { status: HTTP_STATUS.BAD_REQUEST });
+            return NextResponse.json({ error: "El nombre de usuario ya existe", success: false }, { status: HTTP_STATUS.BAD_REQUEST });
         }
 
         //hash password

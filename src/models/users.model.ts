@@ -53,7 +53,7 @@ const userSchema = new mongoose.Schema({
     },
     isVerified: {
         type: Boolean,
-        default: false,
+        default: true,
     },
     isWorker: {
         type: Boolean,
@@ -65,7 +65,7 @@ const userSchema = new mongoose.Schema({
     },
     userDescription: {
         type: String,
-        default: "Lets join hands to make earth green.",
+        default: "Aguante reciclar :)",
     },
     city: {
         type: String,

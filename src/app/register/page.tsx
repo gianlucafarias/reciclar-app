@@ -86,7 +86,7 @@ const Page = () => {
             };
             const res = await axios.post("/api/auth/register", UserData);
             if (res) {
-                Toast.SuccessshowToast(`Email sent to ${email} please verify` || "Something went wrong");
+                Toast.SuccessshowToast(`Te enviamos un correo a ${email} para completar el registro.` || "Something went wrong");
             } else {
                 Toast.ErrorShowToast("Something went wrong");
             }
